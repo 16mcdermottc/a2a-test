@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  python-agent:
+    build: ./python-agent
+    ports: ["8001:8001"]
+    environment:
+      - AGENT_HOST=python-agent
+
+  node-agent:
+    build: ./node-agent
+    ports: ["8002:8002"]
+    environment:
+      - AGENT_HOST=node-agent
+
+  go-agent:
+    build: ./go-agent
+    ports: ["8003:8003"]
+    environment:
+      - AGENT_HOST=go-agent
+
+  java-agent:
+    build: ./java-agent
+    ports: ["8004:8004"]
+    environment:
+      - AGENT_HOST=java-agent
+
+  kotlin-agent:
+    build: ./kotlin-agent
+    ports: ["8005:8005"]
+    environment:
+      - AGENT_HOST=kotlin-agent
